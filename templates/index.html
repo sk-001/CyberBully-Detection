@@ -1,0 +1,79 @@
+<!-- Welcome to your CSS Level One Assessment Test!
+
+For this test, edit the CSS file and complete the commented tasks below!
+You won't be editing and html, but the css file is linked to the html file.
+Watch the video lecture for more info on this! -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Assessment Test CSS</title>
+<!--    <link rel="stylesheet" href="CSS_Assessment.css">-->
+<!--       <link rel="stylesheet" type="text/css" href="../static/css/styles.css">-->
+      <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<!--	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">-->
+<!--    <link href="https://fonts.googleapis.com/css?family=Aldrich|Fredoka+One" rel="stylesheet">-->
+<!--    link-->
+  </head>
+  <body>
+    <h1 id="container" >Cyber Bully Detector!</h1>
+
+    <div class="someclass">
+      <p>Thanks so much for visiting this site!</p>
+    </div>
+
+    <h2>What is this site for?</h2>
+    <p>This site can do three things:</p>
+    <ol>
+      <li>Take in your comment</li>
+      <li>0 : no bullying       1: bullying</li>
+      <li><a href="https://youtu.be/BBJa32lCaaY">Dont Click !</a></li>
+    </ol>
+
+
+    <h2>Please be Generous!</h2>
+
+    <div class="container">
+            <form action="{{url_for('sentiment')}}" method="POST">
+                <input type="text" name="review" placeholder="pass your comment" id="ipt"/>
+
+                <button id="btn" type="submit">Submit</button>
+
+
+            </form>
+
+            <br>
+            <br>
+
+
+
+        </div>
+
+
+                <div class="foot">
+                <h3>
+                    {{ prediction_text }}
+                </h3>
+
+            </div>
+
+    <div class="exit">
+
+
+
+    <p>Questions or Comments? Send us feedback here:</p>
+
+    <textarea id="textblock" name="name" rows="8" cols="20"></textarea>
+
+    </div>
+
+
+    <div class="footer">
+      <p>Name:Rishabh Rawat</p>
+            <p>Univ Roll-No:2018634 </p>
+                <p>StudentId-20021600</p>
+                <p>Sec:E</p>
+                <p>Graphic Era Hill University</p>
+    </div>
+  </body>
+</html>
